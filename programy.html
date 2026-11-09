@@ -9,9 +9,25 @@
     </head>
     <body>
         <p><a href="index.html">Go back!</a></p>
+        <button id="tlačítko">
+            Hod´ si mincí
+        </button><br>
 
+        <h1>Kostky:</h1>
+        <button id="kostka">Roll a dice</button><br>
+        <p id="výsledek"></p>
         
+        <script src="script.js"></script>
         <script>
+            document.getElementById("kostka").addEventListener("click", hodKostky());
+
+            function hodKostky() {
+                const strany = 6;
+                const hod = Math.floor(Math.random() * strany) + 1;
+                console.log(hod);
+                document.getElementById("výsledek").innerHTML = "You rolled a ..." + hod + "!";
+            }
+
         </script>
         <noscript><p>Please enable JavaScript:)</p></noscript>
     </body>
