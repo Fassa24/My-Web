@@ -10,6 +10,14 @@ function hodMincí() {
 }
 
 //Kostka
+document.getElementById("kostka").addEventListener("click", hodKostky());
+
+function hodKostky() {
+    const strany = 6;
+    const hod = Math.floor(Math.random() * strany) + 1;
+    console.log(hod);
+    document.getElementById("výsledek").innerHTML = "You rolled a ..." + hod + "!";
+}
 /*document.getElementById("kostka").addEventListener("click", hodKostky);
 
 function hodKostky() {
